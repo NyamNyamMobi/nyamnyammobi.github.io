@@ -1,28 +1,82 @@
-<!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="nyamnyam.mobi : NyamNyam site" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>nyamnyam.mobi</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-         
-          <h1 id="project_title">nyamnyam.mobi</h1>
-          <h2 id="project_tagline">NyamNyam site</h2>
-
-        </header>
-    </div>
+<head>
+	<title>NyamNyam Text To Image for instagram, Facebook, Twitter, Pinterest and any other blog</title>
 
 
-  </body>
+<style type="text/css">
+
+body{
+	margin:0;
+	padding:0;
+}
+
+
+body>div{
+	margin: auto;
+}
+
+#download{
+	display:block;
+	margin:auto;
+	background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-lrg.png) no-repeat;
+	width:135px;
+	height:40px;
+	margin-top:20px;
+
+	@media only screen{
+		background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-lrg.svg);
+	}
+}
+
+#top{
+	height:50px;
+}
+
+
+#slideshow{
+	width:500px;
+	height: 500px;
+
+}
+
+#slideshow>img{
+	box-shadow: 0px 0px 30px rgb(73, 73, 73);
+}
+
+
+</style>
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="jquery.cycle.all.js"></script>
+
+<script type="text/javascript">
+
+
+    $(function() {
+     
+	$('#slideshow').cycle({
+      fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+      timeout: 5000
+    });
+
+    });
+
+</script>
+
+
+
+</head>
+<body>
+
+<div id="top"></div>
+
+  <div id="slideshow">
+ 	<img data-id="1" src="images/foto2.jpg" alt="Get TubeCount from the AppStore">
+	<img data-id="2" src="images/foto3.jpg">
+	<img data-id="3" src="images/foto4.jpg">
+  </div>
+
+<a id="download" href="https://itunes.apple.com/us/app/tubecount/id639386893?mt=8&uo=4" target="itunes_store"></a>
+
+</body>
 </html>
