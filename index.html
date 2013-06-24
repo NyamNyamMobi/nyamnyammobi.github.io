@@ -21,7 +21,7 @@ body>div{
 	background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-lrg.png) no-repeat;
 	width:135px;
 	height:40px;
-	margin-top:20px;
+	margin-top:10px;
 
 	@media only screen{
 		background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-lrg.svg);
@@ -35,31 +35,65 @@ body>div{
 
 #slideshow{
 	width:500px;
-	height: 500px;
-
+	margin: auto;
 }
+
+
 
 #slideshow>img{
 	box-shadow: 0px 0px 30px rgb(73, 73, 73);
+	width: 500px;
 }
 
 
 </style>
 
-<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="jquery.cycle.all.js"></script>
+<!-- <script type="text/javascript" src="jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+
+
+
+<!-- <script type="text/javascript" src="jquery.cycle.all.js"></script> -->
+
+<script type="text/javascript" src="jquery.cycle2.min.js"></script>
+
+
+
 
 <script type="text/javascript">
 
+var elem;
 
-    $(function() {
-     
-	$('#slideshow').cycle({
-      fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-      timeout: 5000
-    });
+function getHeight(){
+	return elem.clientHeight;
+}
 
-    });
+function doresize(){
+
+	var h = getHeight();
+
+	var rest = h - 70;
+	console.log("height: " + h);
+
+	if(rest < 500){
+
+		$("#slideshow").css("width", rest + "px" );
+		$("#slideshow>img").css("width", rest + "px" );
+
+  		console.log("height: " + h);
+ 	 }
+}
+
+
+$(window).resize(function() {
+	doresize();
+});
+
+$(function() {
+	elem = (document.compatMode === "CSS1Compat") ? document.documentElement : document.body;
+ 	doresize();
+});
+
 
 </script>
 
@@ -68,15 +102,15 @@ body>div{
 </head>
 <body>
 
-<div id="top"></div>
+<div id="top"><a id="download" href="https://itunes.apple.com/us/app/tubecount/id639386893?mt=8&uo=4" target="itunes_store"></a></div>
 
-  <div id="slideshow">
- 	<img data-id="1" src="foto2.jpg" alt="Get TubeCount from the AppStore">
+  <div id="slideshow" class="cycle-slideshow">
+ 	<img data-id="1" src="foto2.jpg">
 	<img data-id="2" src="foto3.jpg">
 	<img data-id="3" src="foto4.jpg">
   </div>
 
-<a id="download" href="https://itunes.apple.com/us/app/tubecount/id639386893?mt=8&uo=4" target="itunes_store"></a>
+
 
 </body>
 </html>
