@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>NyamNyam Text To Image for Instagram, Facebook, Twitter, Pinterest and any other blog</title>
+<title>NyamNyam Text To Image for Instagram, Facebook, Twitter, Pinterest, Google Plus, Flickr and any other blog</title>
 
 <style type="text/css">
 
@@ -13,16 +13,20 @@ body>div{
 	margin: auto;
 }
 
+
 #download{
 	display:block;
 	margin:auto;
 	background:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-lrg.png) no-repeat;
-	width:135px;
 	height:40px;
-	margin-top:10px;
+	width:135px;
+	margin:auto;
+	margin-top: 10px;
+
 	@media only screen{
 		background-image:url(http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_appstore-lrg.svg);
 	}
+
 }
 
 #top{
@@ -38,6 +42,9 @@ body>div{
 	box-shadow: 0px 0px 30px rgb(73, 73, 73);
 	width: 500px;
 }
+
+
+
 </style>
 
 <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
@@ -54,14 +61,14 @@ function getHeight(){
 function doresize(){
 	var h = getHeight();
 	var rest = h - 70;
-	console.log("height: " + h);
+	//console.log("height: " + h);
 
 	if(rest < 500){
 
 		$("#slideshow").css("width", rest + "px" );
 		$("#slideshow>img").css("width", rest + "px" );
 
-  		console.log("height: " + h);
+  		//console.log("height: " + h);
  	 }
 }
 
@@ -92,7 +99,7 @@ $(function() {
 <body>
 
 <div id="top">
-	<a id="download" href="https://itunes.apple.com/us/app/tubecount/id639386893?mt=8&uo=4" target="itunes_store"></a>
+	<a id="download" href="https://itunes.apple.com/us/app/tubecount/id639386893?mt=8&uo=4" target="itunes_store"></a> 
 </div>
 
   <div id="slideshow" class="cycle-slideshow" data-cycle-timeout="2500">
